@@ -4,15 +4,26 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png" />
+    <link rel="manifest" href="assets/site.webmanifest" />
     <link rel="stylesheet" href="index.css" />
+    <title>password generator application </title>
   </head>
   <body>
-    <section class="password-gen-container">
+    <main class="password-gen-container" role="application">
       <h1>password generator</h1>
-      <div class="container">
+      <section class="container">
         <div id="password-container" contenteditable="true"></div>
-        <span id="copy-password">copy</span>
-      </div>
+        <span id="copy-password" tabindex=0>copy</span>
+      </section>
       <div class="inputs">
         <label for="password-length">
           password length:
@@ -44,7 +55,7 @@
         </label>
       </div>
       <button id="generate-password">Generate</button>
-    </section>
+    </main>
     <script src="index.js"></script>
   </body>
 </html>

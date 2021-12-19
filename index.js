@@ -39,10 +39,13 @@ copyPasswordBtn.addEventListener("click", () => {
 });
 
 const copyToClipBoard = (source) => {
-  navigator.clipboard.writeText(source.textContent);
-
-  /* Alert the copied text */
-  alert("password copied!");
+  if (source.textContent.length) {
+    navigator.clipboard.writeText(source.textContent);
+    /* Alert the copied text */
+    alert("password copied!");
+  } else {
+    alert("generate password first!");
+  }
 };
 
 const generatePassWord = (
@@ -52,21 +55,26 @@ const generatePassWord = (
   hasSpecialCharacters,
   hasNumbers
 ) => {
-  let choosenCharacters = [
-    ...(hasUpperCase ? upperCaseChars : []),
-    ...(hasLowerCase ? lowerCaseChars : []),
-    ...(hasSpecialCharacters ? specialChars : []),
-    ...(hasNumbers ? numbers : []),
-  ];
   let password = "";
-  if (choosenCharacters.length) {
-    for (let i = 0; i < length; i++) {
-      const randomIndex = Math.floor(Math.random() * choosenCharacters.length);
-      password += choosenCharacters[randomIndex];
+  if (length >= 6) {
+    let choosenCharacters = [
+      ...(hasUpperCase ? upperCaseChars : []),
+      ...(hasLowerCase ? lowerCaseChars : []),
+      ...(hasSpecialCharacters ? specialChars : []),
+      ...(hasNumbers ? numbers : []),
+    ];
+    if (choosenCharacters.length) {
+      for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(
+          Math.random() * choosenCharacters.length
+        );
+        password += choosenCharacters[randomIndex];
+      }
+    } else {
+      alert("Please select at least one set of characters!");
     }
   } else {
-    alert("Please select at least one set character!");
+    alert("minmum password length is 6!");
   }
-
   return password;
 };

@@ -65,3 +65,6 @@ input {
   border-radius: 6px;
   border: none;
 }
+button {
+  cursor: pointer;
+}

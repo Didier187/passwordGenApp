@@ -1,0 +1,64 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+h1{
+    text-transform: capitalize;
+    color: green;
+    padding-bottom: .3em;
+    border-bottom: 3px solid
+}
+label{
+    display: flex;
+    align-items: center;
+    gap:10px
+}
+.password-gen-container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    gap:1em;
+    align-items: center;
+    box-sizing: border-box;
+}
+.inputs{
+    
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    width: 500px;
+    padding: 1em;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+}
+input{
+    accent-color: green;
+}
+.container{
+    display: flex;
+    align-items: center;
+    gap:1em;
+}
+.container span{
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+.container span:hover, .container span:focus{
+    color: green;
+}
+#password-container{
+    width: 470px;
+    height: 50px;
+    padding: 1em;
+    box-sizing: border-box;
+    border-radius: 6px;
+    box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+#generate-password{
+    color: white;
+    background: green;
+    padding: .5em;
+    border-radius: 6px;
+    border: none
+}

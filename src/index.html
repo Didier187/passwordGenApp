@@ -1,0 +1,50 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css"
+    />
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <section class="password-gen-container">
+      <h1>password generator</h1>
+      <div class="container">
+        <div id="password-container" contenteditable="true"></div>
+        <span id="copy-password">copy</span>
+      </div>
+      <div class="inputs">
+        <label for="password-length">
+          password length:
+          <input
+            type="range"
+            min="0"
+            max="50"
+            step="1"
+            id="password-length"
+            value="12"
+          />
+          <span id="password-length-value">0</span>
+        </label>
+        <label for="hasUpperCaseChar">
+          include uppercase characters:
+          <input type="checkbox" id="hasUpperCaseChar" />
+        </label>
+        <label for="hasLowerCaseChar">
+          include lowercase characters:
+          <input type="checkbox" id="hasLowerCaseChar" />
+        </label>
+        <label for="hasNumbers">
+          include numbers:
+          <input type="checkbox" id="hasNumbers" checked />
+        </label>
+        <label for="hasSpecialChar">
+          include special characters:
+          <input type="checkbox" id="hasSpecialChar" />
+        </label>
+      </div>
+      <button id="generate-password">Generate</button>
+    </section>
+    <script src="index.js"></script>
+  </body>
+</html>

@@ -59,10 +59,13 @@ const generatePassWord = (
     ...(hasNumbers ? numbers : []),
   ];
   let password = "";
-
-  for (let i = 0; i < length; i++) {
-    const randomIndex = Math.floor(Math.random() * choosenCharacters.length);
-    password += choosenCharacters[randomIndex];
+  if (choosenCharacters.length) {
+    for (let i = 0; i < length; i++) {
+      const randomIndex = Math.floor(Math.random() * choosenCharacters.length);
+      password += choosenCharacters[randomIndex];
+    }
+  } else {
+    alert("Please select at least one set character!");
   }
 
   return password;

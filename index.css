@@ -3,12 +3,14 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Inter", sans-serif;
+  font-size: 14px;
 }
 h1 {
   text-transform: capitalize;
   color: green;
   padding-bottom: 0.3em;
   border-bottom: 3px solid;
+  font-size:1.2rem
 }
 label {
   display: flex;
@@ -22,12 +24,13 @@ label {
   gap: 1em;
   align-items: center;
   box-sizing: border-box;
+  padding: 2em
 }
 .inputs {
   display: flex;
   flex-direction: column;
   gap: 16px;
-  width: 500px;
+  max-width: 500px;
   padding: 1em;
   border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
@@ -50,21 +53,56 @@ input {
   color: green;
 }
 #password-container {
-  width: 470px;
-  height: 50px;
+  width: 230px;;
+  max-width: 470px;
+  height: 30px;
+  display: flex;
+  align-items: center;
   padding: 1em;
   box-sizing: border-box;
   border-radius: 6px;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
     rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 #generate-password {
   color: white;
   background: green;
-  padding: 0.5em;
+  padding: 0.7em;
   border-radius: 6px;
   border: none;
-}
-button {
   cursor: pointer;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+@media  screen and (min-width: 550px){
+  body,html{
+    font-size:16px
+  }
+  h1{
+    font-size:1.5rem
+  }
+  #password-container{
+    width: 420px;
+    height:50px;
+  }
+  .inputs{
+    width: 450px;
+  }
+}
+@media  screen and (min-width: 780px){
+  body,html{
+    font-size:18px
+  }
+  h1{
+    font-size:1.7rem
+  }
+  #password-container{
+    width: 470px;
+    height:50px;
+  }
+  .inputs{
+    width: 500px;
+  }
 }
